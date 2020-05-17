@@ -781,7 +781,7 @@ Next, click on the Player and connect the ``hit`` signal. We want to make a
 new function named ``game_over``, which will handle what needs to happen when a
 game ends. Type "game_over" in the "Receiver Method" box at the bottom of the
 "Connect a Signal" window and click "Connect". Add the following code to the
-new function, as well as a ``new_game`` function that will set everything up
+new function, as well as a ``start_game`` function that will set everything up
 for a new game:
 
 .. tabs::
@@ -791,7 +791,7 @@ for a new game:
         $ScoreTimer.stop()
         $MobTimer.stop()
 
-    func new_game():
+    func start_game():
         score = 0
         $Player.start($StartPosition.position)
         $StartTimer.start()
